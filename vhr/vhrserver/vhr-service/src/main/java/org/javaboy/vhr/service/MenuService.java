@@ -4,7 +4,6 @@ import org.javaboy.vhr.mapper.MenuMapper;
 import org.javaboy.vhr.mapper.MenuRoleMapper;
 import org.javaboy.vhr.model.Hr;
 import org.javaboy.vhr.model.Menu;
-import org.javaboy.vhr.model.MenuRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
@@ -30,6 +29,7 @@ public class MenuService {
     MenuMapper menuMapper;
     @Autowired
     MenuRoleMapper menuRoleMapper;
+
     public List<Menu> getMenusByHrId() {
         return menuMapper.getMenusByHrId(((Hr) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getId());
     }
@@ -54,6 +54,6 @@ public class MenuService {
             return true;
         }
         Integer result = menuRoleMapper.insertRecord(rid, mids);
-        return result==mids.length;
+        return result == mids.length;
     }
 }

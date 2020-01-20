@@ -1,13 +1,10 @@
 package org.javaboy.mailserver.receiver;
 
-import org.apache.commons.logging.LogFactory;
 import org.javaboy.vhr.model.Employee;
-import org.javaboy.vhr.model.Hr;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.mail.MailProperties;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -61,7 +58,7 @@ public class MailReceiver {
             javaMailSender.send(msg);
         } catch (MessagingException e) {
             e.printStackTrace();
-            logger.error("邮件发送失败："+e.getMessage());
+            logger.error("邮件发送失败：" + e.getMessage());
         }
     }
 }

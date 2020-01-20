@@ -1,6 +1,5 @@
 package org.javaboy.vhr.controller.system.basic;
 
-import org.apache.ibatis.annotations.Delete;
 import org.javaboy.vhr.model.JobLevel;
 import org.javaboy.vhr.model.RespBean;
 import org.javaboy.vhr.service.JobLevelService;
@@ -23,6 +22,7 @@ import java.util.List;
 public class JobLevelController {
     @Autowired
     JobLevelService jobLevelService;
+
     @GetMapping("/")
     public List<JobLevel> getAllJobLevels() {
         return jobLevelService.getAllJobLevels();

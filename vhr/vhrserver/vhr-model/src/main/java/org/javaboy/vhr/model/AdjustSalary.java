@@ -1,8 +1,5 @@
 package org.javaboy.vhr.model;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.Date;
 
 public class AdjustSalary {

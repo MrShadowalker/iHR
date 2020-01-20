@@ -5,11 +5,14 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+/**
+ * @author Shadowalker
+ */
 @SpringBootApplication
-public class MailserverApplication {
+public class MailServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MailserverApplication.class, args);
+        SpringApplication.run(MailServerApplication.class, args);
     }
 
     @Bean
